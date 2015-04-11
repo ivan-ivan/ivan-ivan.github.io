@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+	<title>Best Pizza Roger project</title>
+	<!-- <link rel="stylesheet" href="normilize.css"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<!-- <link rel="stylesheet" href="http://cdn.datatables.net/1.10.2/css/jquery.dataTables.min.css"> -->
+	<!-- <script src="http://cdn.datatables.net/1.10.2/js/jquery.dataTables.min.js"></script> -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+</head>
+<body>
+	<div class="wrapper">
+		<header class='header'>
+			<h1>Find the cheapest one!</h1>
+		</header>
+		<div class="tabs">
+
+		    <ul class="tab-links">
+		        <li class="active"><a href="#tab1">Find the best</a></li>
+		        <li><a href="#tab2">About</a></li>
+		        <li><a href="#tab3">Contact</a></li>
+		    </ul>
+	 
+		    <div class="tab-content">
+
+		        <div id="tab1" class="tab active">
+		            <form class='myform'>
+		            	<select name="options" class="select">
+		            		<option>Choose...</option>
+		            		<option value="a">Pizza</option>
+		            		<option value="b">Something else</option>
+		            		<option value="c">One more stuff</option>
+		            	</select>
+		            	<button class='btn'>Find some stuff</button>
+		            </form>
+		            <h1>The cheapest prices in the city</h1>
+
+		            <div id="users">
+			            <button class='sort btn' data-sort='price'>Sort by price</button>
+			            <table id='my-table' class='table table-striped'>
+			            	<thead>
+				               <tr> 
+				                 <th>Name</th>
+				                 <th>2015</th>
+				               </tr>
+				            </thead>  
+				            <tbody class='list'> 
+				               <tr> 
+				                 <td class='name'>Margarita</td>
+				                 <td class='price'>250</td>
+				               </tr>
+				               <tr>
+				                 <td class='name'>Gorganzolla</td>
+				                 <td class='price'>150</td>
+				               </tr>
+				               <tr>
+				                 <td class='name'>Pepperoni</td>
+				                 <td class='price'>110</td>
+				               </tr>
+				            </tbody>
+			          </table> 
+			        </div><!-- /sort -->
+
+		        </div><!-- /tab1 -->
+		 
+		        <div id="tab2" class="tab">
+		            <p>Tab #2 content goes here!</p>
+		            <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum risus ornare mollis. In hac habitasse platea dictumst. Ut euismod tempus hendrerit. Morbi ut adipiscing nisi. Etiam rutrum sodales gravida! Aliquam tellus orci, iaculis vel.</p>
+		        </div>
+		 
+		        <div id="tab3" class="tab">
+		            <p>Tab #3 content goes here!</p>
+		            <p>Donec pulvinar neque sed semper lacinia. Curabitur lacinia ullamcorper nibh; quis imperdiet velit eleifend ac. Donec blandit mauris eget aliquet lacinia! Donec pulvinar massa interdum ri.</p>
+		        </div>
+
+		    </div><!--/tab-content-->
+		</div><!--/tabs-->
+		<footer class='footer'>
+			<h1>2015 | Roger incorporation team</h1>
+		</footer>
+	</div><!--/wrapper -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+	<script src="main.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,1435 @@
+/* line 5, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 21, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Oswald';
+  src: url("../fonts/Oswald/Oswald-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Oswald Light';
+  src: url("../fonts/Oswald/Oswald-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'Lekton';
+  src: url("../fonts/Lekton/Lekton-Regular.ttf") format("truetype");
+}
+/* line 31, ../sass/style.scss */
+body {
+  background: #fff;
+}
+
+/* line 35, ../sass/style.scss */
+.header {
+  position: relative;
+}
+/* line 24, ../sass/style.scss */
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 40, ../sass/style.scss */
+.masthead {
+  width: 50%;
+  float: left;
+}
+@media screen and (max-width: 1050px) {
+  /* line 40, ../sass/style.scss */
+  .masthead {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 49, ../sass/style.scss */
+.left-side {
+  background: #f0d93e;
+  padding: 110px 0 53px 115px;
+}
+/* line 24, ../sass/style.scss */
+.left-side:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 54, ../sass/style.scss */
+.left-side p {
+  color: #4eabab;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-family: 'Oswald';
+}
+/* line 60, ../sass/style.scss */
+.left-side p:last-child {
+  margin-bottom: 130px;
+}
+
+/* line 66, ../sass/style.scss */
+.right-side {
+  background: #c9c3b3;
+  padding-top: 120px;
+}
+/* line 24, ../sass/style.scss */
+.right-side:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 71, ../sass/style.scss */
+.right-side .centered {
+  max-width: 220px;
+  margin: 0 auto;
+}
+/* line 75, ../sass/style.scss */
+.right-side .centered h3 {
+  font-family: 'Lekton';
+  color: #848484;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
+/* line 83, ../sass/style.scss */
+.right-side .centered p {
+  color: #fff;
+  font-size: 14px;
+  font-family: 'Lekton';
+  text-transform: uppercase;
+  line-height: 20px;
+}
+/* line 90, ../sass/style.scss */
+.right-side .centered p span {
+  color: #fdeecf;
+  margin-right: 15px;
+}
+/* line 96, ../sass/style.scss */
+.right-side .centered .center-btn {
+  text-align: center;
+}
+/* line 99, ../sass/style.scss */
+.right-side .centered .center-btn a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 10px 45px;
+  border: 1px solid #9a977a;
+  font-family: 'Lekton';
+  font-size: 14px;
+  margin-top: 25px;
+  display: inline-block;
+  width: 120px;
+}
+/* line 111, ../sass/style.scss */
+.right-side .centered .center-btn a:hover {
+  border: 1px solid #fff;
+  color: #9a977a;
+}
+/* line 119, ../sass/style.scss */
+.right-side img {
+  display: block;
+  width: 357px;
+  margin: 26px auto 0;
+}
+
+/* line 126, ../sass/style.scss */
+.hamburger {
+  position: absolute;
+  top: 37px;
+  left: 24px;
+}
+/* line 131, ../sass/style.scss */
+.hamburger span {
+  display: block;
+  height: 3px;
+  width: 20px;
+  background: #4bc7c7;
+  margin-bottom: 5px;
+}
+/* line 139, ../sass/style.scss */
+.hamburger:hover {
+  cursor: pointer;
+}
+/* line 142, ../sass/style.scss */
+.hamburger:hover span {
+  background: #298383;
+}
+
+/* line 148, ../sass/style.scss */
+.logo {
+  margin-bottom: 10px;
+}
+
+/* line 153, ../sass/style.scss */
+.social-icons li {
+  float: left;
+}
+/* line 156, ../sass/style.scss */
+.social-icons li a {
+  color: #4eabab;
+  margin-right: 10px;
+}
+
+/* line 163, ../sass/style.scss */
+.phone {
+  margin-left: 270px;
+}
+/* line 166, ../sass/style.scss */
+.phone a {
+  color: #4eabab;
+  text-decoration: none;
+  font-family: 'Lekton';
+  font-size: 14px;
+}
+/* line 172, ../sass/style.scss */
+.phone a i {
+  margin-left: 10px;
+}
+
+/* line 178, ../sass/style.scss */
+.about {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 175px;
+  background: #fff;
+  text-align: center;
+}
+/* line 12, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.about:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 24, ../sass/style.scss */
+.about:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 185, ../sass/style.scss */
+.about h3 {
+  font-family: 'Lekton', Helvetica, sans-serif;
+  font-size: 30px;
+  margin-bottom: 33px;
+  text-transform: uppercase;
+}
+/* line 192, ../sass/style.scss */
+.about p {
+  font-family: 'Lekton', Helvetica, sans-serif;
+  font-size: 16px;
+  padding-bottom: 172px;
+}
+
+/* line 199, ../sass/style.scss */
+.products {
+  max-width: 1125px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.products:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 24, ../sass/style.scss */
+.products:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 204, ../sass/style.scss */
+.products article {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+}
+/* line 207, ../sass/style.scss */
+.products article:last-child {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+}
+@media screen and (max-width: 1050px) {
+  /* line 204, ../sass/style.scss */
+  .products article {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 214, ../sass/style.scss */
+  .products article:nth-child(2n + 2) {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 219, ../sass/style.scss */
+.products article h3 {
+  font-family: 'Lekton';
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-left: 7px;
+  border-left: 4px solid #60d4d4;
+  margin-bottom: 17px;
+}
+/* line 229, ../sass/style.scss */
+.products article p {
+  font-family: 'Lekton';
+  font-size: 14px;
+  padding-bottom: 167px;
+}
+
+/* line 237, ../sass/style.scss */
+.team {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.team:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 241, ../sass/style.scss */
+.team .team-member {
+  width: 25%;
+  float: left;
+  padding: 285px 35px 60px 40px;
+}
+@media screen and (max-width: 1150px) {
+  /* line 241, ../sass/style.scss */
+  .team .team-member {
+    width: 50%;
+    float: left;
+  }
+}
+@media screen and (max-width: 670px) {
+  /* line 241, ../sass/style.scss */
+  .team .team-member {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 253, ../sass/style.scss */
+.team .team-member .member-name {
+  font-family: 'Lekton';
+  font-weight: bold;
+  font-size: 30px;
+  color: #60d4d4;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+/* line 262, ../sass/style.scss */
+.team .team-member h3 {
+  font-family: 'Lekton';
+  font-weight: bold;
+  font-size: 14px;
+  color: #000;
+  text-transform: uppercase;
+  line-height: 30px;
+}
+/* line 271, ../sass/style.scss */
+.team .team-member p {
+  font-family: 'Lekton';
+  font-size: 14px;
+  color: #000;
+  margin-bottom: 10px;
+}
+/* line 24, ../sass/style.scss */
+.team .team-member ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 280, ../sass/style.scss */
+.team .team-member ul li {
+  float: left;
+}
+/* line 283, ../sass/style.scss */
+.team .team-member ul li a {
+  color: #000;
+  margin-right: 10px;
+}
+/* line 291, ../sass/style.scss */
+.team .first {
+  background: url(../img/JonDoe.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 297, ../sass/style.scss */
+.team .second {
+  background: url(../img/Emma.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: right;
+  padding-bottom: 57px;
+}
+/* line 304, ../sass/style.scss */
+.team .second ul {
+  display: inline-block;
+  text-align: right;
+}
+/* line 310, ../sass/style.scss */
+.team .third {
+  background: url(../img/JonDoe.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* line 316, ../sass/style.scss */
+.team .fourth {
+  background: url(../img/Lara.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: right;
+  padding-bottom: 57px;
+}
+/* line 323, ../sass/style.scss */
+.team .fourth ul {
+  display: inline-block;
+  text-align: right;
+}
+
+/* line 330, ../sass/style.scss */
+.process {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 160px;
+  background: #f7f7f7;
+  text-align: center;
+}
+/* line 12, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.process:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 24, ../sass/style.scss */
+.process:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 337, ../sass/style.scss */
+.process h3 {
+  font-family: 'Oswald Light', Helvetica, sans-serif;
+  font-size: 30px;
+  margin-bottom: 33px;
+  text-transform: uppercase;
+}
+/* line 344, ../sass/style.scss */
+.process p {
+  font-family: 'Lekton', Helvetica, sans-serif;
+  font-size: 16px;
+  padding-bottom: 100px;
+  max-width: 800px;
+  display: inline-block;
+}
+
+/* line 353, ../sass/style.scss */
+.features {
+  background: #f7f7f7;
+}
+/* line 356, ../sass/style.scss */
+.features .features-2 {
+  max-width: 1125px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+/* line 12, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.features .features-2:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 24, ../sass/style.scss */
+.features .features-2:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 362, ../sass/style.scss */
+.features .features-2 article {
+  width: 23.72881%;
+  float: left;
+  margin-right: 1.69492%;
+}
+/* line 365, ../sass/style.scss */
+.features .features-2 article:last-child {
+  width: 23.72881%;
+  float: right;
+  margin-right: 0;
+}
+@media screen and (max-width: 1050px) {
+  /* line 362, ../sass/style.scss */
+  .features .features-2 article {
+    width: 49.15254%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+  /* line 372, ../sass/style.scss */
+  .features .features-2 article:nth-child(2n + 2) {
+    width: 49.15254%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 362, ../sass/style.scss */
+  .features .features-2 article {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 380, ../sass/style.scss */
+  .features .features-2 article:nth-child(2n + 2) {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 386, ../sass/style.scss */
+.features .features-2 article img {
+  margin-bottom: 20px;
+}
+/* line 390, ../sass/style.scss */
+.features .features-2 article h3 {
+  font-family: 'Lekton';
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+/* line 398, ../sass/style.scss */
+.features .features-2 article p {
+  font-family: 'Lekton';
+  font-size: 14px;
+  padding-bottom: 160px;
+}
+
+/* line 407, ../sass/style.scss */
+.portfolio {
+  max-width: 475px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 149px;
+  background: #fff;
+  text-align: center;
+}
+/* line 12, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.portfolio:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 24, ../sass/style.scss */
+.portfolio:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 414, ../sass/style.scss */
+.portfolio h3 {
+  font-family: 'Oswald Light', Helvetica, sans-serif;
+  font-size: 30px;
+  margin-bottom: 33px;
+  text-transform: uppercase;
+}
+/* line 421, ../sass/style.scss */
+.portfolio .wrap {
+  display: table;
+  margin: 0 auto;
+  padding-bottom: 80px;
+}
+/* line 427, ../sass/style.scss */
+.portfolio .wrap ul li {
+  float: left;
+  margin-right: 10px;
+  border-right: 1px solid #000;
+}
+/* line 432, ../sass/style.scss */
+.portfolio .wrap ul li a {
+  text-decoration: none;
+  display: block;
+  padding: 0 10px;
+  font-family: 'Lekton';
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #000;
+}
+/* line 446, ../sass/style.scss */
+.portfolio .wrap ul li a:hover {
+  text-decoration: underline;
+}
+/* line 451, ../sass/style.scss */
+.portfolio .wrap ul li:last-child {
+  border-right: none;
+}
+
+/* line 24, ../sass/style.scss */
+.works:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 463, ../sass/style.scss */
+.works .work-section {
+  width: 33.33333%;
+  float: left;
+  height: 500px;
+}
+@media screen and (max-width: 1200px) {
+  /* line 463, ../sass/style.scss */
+  .works .work-section {
+    width: 50%;
+    float: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 463, ../sass/style.scss */
+  .works .work-section {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 476, ../sass/style.scss */
+.works .first {
+  background: #f54759 url(../img/mobile.png) no-repeat 17px 270px;
+}
+/* line 479, ../sass/style.scss */
+.works .first h3 {
+  font-family: 'Lekton';
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+  margin: 200px 0 0 200px;
+}
+/* line 487, ../sass/style.scss */
+.works .first p {
+  font-family: 'Lekton';
+  font-size: 14px;
+  color: #000;
+  margin: 10px 0 0 210px;
+}
+/* line 495, ../sass/style.scss */
+.works .second {
+  background: orange;
+}
+/* line 498, ../sass/style.scss */
+.works .second .sub-block {
+  height: 250px;
+}
+/* line 502, ../sass/style.scss */
+.works .second .sub-first {
+  background: #dfdfd7;
+}
+/* line 505, ../sass/style.scss */
+.works .second .sub-first h3 {
+  font-family: 'Lekton';
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+  padding: 100px 0 0 300px;
+}
+/* line 513, ../sass/style.scss */
+.works .second .sub-first p {
+  font-family: 'Lekton';
+  font-size: 14px;
+  color: #000;
+  padding: 0 0 0 300px;
+  font-style: italic;
+}
+/* line 522, ../sass/style.scss */
+.works .second .sub-second {
+  background: #e6e6e6;
+}
+/* line 525, ../sass/style.scss */
+.works .second .sub-second h3 {
+  font-family: 'Lekton';
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+  padding: 100px 0 0 100px;
+}
+/* line 533, ../sass/style.scss */
+.works .second .sub-second p {
+  font-family: 'Lekton';
+  font-size: 14px;
+  color: #000;
+  padding: 0 0 0 100px;
+  font-style: italic;
+}
+/* line 543, ../sass/style.scss */
+.works .third {
+  background: #d6f0ed;
+}
+/* line 546, ../sass/style.scss */
+.works .third h3 {
+  font-family: 'Lekton';
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+  padding: 200px 0 0 100px;
+}
+/* line 554, ../sass/style.scss */
+.works .third p {
+  font-family: 'Lekton';
+  font-size: 14px;
+  color: #000;
+  padding: 0 0 0 100px;
+  font-style: italic;
+}
+
+/* line 24, ../sass/style.scss */
+.works-more:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 568, ../sass/style.scss */
+.works-more .work-section {
+  width: 33.33333%;
+  float: left;
+  height: 500px;
+}
+@media screen and (max-width: 1200px) {
+  /* line 568, ../sass/style.scss */
+  .works-more .work-section {
+    width: 50%;
+    float: left;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 568, ../sass/style.scss */
+  .works-more .work-section {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 582, ../sass/style.scss */
+.works-more .first .sub-block {
+  height: 250px;
+}
+/* line 586, ../sass/style.scss */
+.works-more .first .sub-first {
+  background: #e3dad0;
+}
+/* line 589, ../sass/style.scss */
+.works-more .first .sub-first h3 {
+  font-family: 'Lekton';
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+  padding: 100px 0 0 300px;
+}
+/* line 597, ../sass/style.scss */
+.works-more .first .sub-first p {
+  font-family: 'Lekton';
+  font-size: 14px;
+  color: #000;
+  padding: 0 0 0 300px;
+  font-style: italic;
+}
+/* line 606, ../sass/style.scss */
+.works-more .first .sub-second {
+  background: #ddcbc0;
+}
+/* line 609, ../sass/style.scss */
+.works-more .first .sub-second h3 {
+  font-family: 'Lekton';
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+  padding: 50px 0 0 200px;
+}
+/* line 617, ../sass/style.scss */
+.works-more .first .sub-second p {
+  font-family: 'Lekton';
+  font-size: 14px;
+  color: #000;
+  padding: 0 0 0 200px;
+  font-style: italic;
+}
+/* line 627, ../sass/style.scss */
+.works-more .second {
+  background: #513c4b;
+}
+/* line 630, ../sass/style.scss */
+.works-more .second h3 {
+  font-family: 'Lekton';
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #60d4d4;
+  padding: 200px 0 0 200px;
+}
+/* line 638, ../sass/style.scss */
+.works-more .second p {
+  font-family: 'Lekton';
+  font-size: 14px;
+  color: #60d4d4;
+  padding: 0 0 0 200px;
+  font-style: italic;
+}
+/* line 649, ../sass/style.scss */
+.works-more .third .sub-block {
+  height: 250px;
+}
+/* line 653, ../sass/style.scss */
+.works-more .third .sub-first {
+  background: #f1edd2;
+}
+/* line 656, ../sass/style.scss */
+.works-more .third .sub-first h3 {
+  font-family: 'Lekton';
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #000;
+  padding: 100px 0 0 100px;
+}
+/* line 664, ../sass/style.scss */
+.works-more .third .sub-first p {
+  font-family: 'Lekton';
+  font-size: 14px;
+  color: #000;
+  padding: 0 0 0 100px;
+  font-style: italic;
+}
+/* line 673, ../sass/style.scss */
+.works-more .third .sub-second {
+  background: #f0d93e;
+  padding: 70px 0 0 110px;
+}
+/* line 677, ../sass/style.scss */
+.works-more .third .sub-second p {
+  color: #000;
+  font-size: 14px;
+  font-family: 'Lekton';
+  text-transform: uppercase;
+  line-height: 20px;
+}
+/* line 684, ../sass/style.scss */
+.works-more .third .sub-second p span {
+  color: #60d4d4;
+  margin-right: 15px;
+}
+/* line 690, ../sass/style.scss */
+.works-more .third .sub-second .center-btn {
+  text-align: center;
+}
+/* line 693, ../sass/style.scss */
+.works-more .third .sub-second .center-btn a {
+  text-decoration: none;
+  color: #60d4d4;
+  text-transform: uppercase;
+  padding: 10px 45px;
+  border: 1px solid #9a977a;
+  font-family: 'Lekton';
+  font-size: 14px;
+  margin-top: 25px;
+  display: inline-block;
+  width: 120px;
+}
+/* line 705, ../sass/style.scss */
+.works-more .third .sub-second .center-btn a:hover {
+  border: 1px solid #fff;
+  color: #9a977a;
+}
+
+/* line 715, ../sass/style.scss */
+.load-more {
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 80px 0 118px 0;
+  text-align: center;
+}
+/* line 12, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.load-more:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 720, ../sass/style.scss */
+.load-more h3 {
+  font: 18px/50px 'Oswald Light', Helvetica, sans-serif;
+  text-transform: uppercase;
+}
+/* line 725, ../sass/style.scss */
+.load-more p {
+  font: 14px 'Oswald Light', Helvetica, sans-serif;
+  letter-spacing: 2px;
+}
+
+/* line 732, ../sass/style.scss */
+.stats {
+  background: #f3f2f2;
+  padding: 50px 0 78px;
+}
+/* line 736, ../sass/style.scss */
+.stats .wrapper {
+  max-width: 1030px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.stats .wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 740, ../sass/style.scss */
+.stats .wrapper h3 {
+  text-align: center;
+  font: 30px 'Oswald Light';
+  color: #60d4d4;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+}
+/* line 748, ../sass/style.scss */
+.stats .wrapper li {
+  width: 13.7931%;
+  float: left;
+  margin-right: 3.44828%;
+  text-align: center;
+}
+/* line 752, ../sass/style.scss */
+.stats .wrapper li:last-child {
+  width: 13.7931%;
+  float: right;
+  margin-right: 0;
+}
+/* line 756, ../sass/style.scss */
+.stats .wrapper li p {
+  text-transform: uppercase;
+  color: #60d4d4;
+  font: 16px/100px 'Oswald Light';
+}
+@media screen and (max-width: 1050px) {
+  /* line 748, ../sass/style.scss */
+  .stats .wrapper li {
+    width: 31.03448%;
+    float: left;
+    margin-right: 3.44828%;
+  }
+  /* line 765, ../sass/style.scss */
+  .stats .wrapper li:nth-child(3n + 3) {
+    width: 31.03448%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 748, ../sass/style.scss */
+  .stats .wrapper li {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 773, ../sass/style.scss */
+  .stats .wrapper li:nth-child(3n + 3) {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* line 784, ../sass/style.scss */
+.blog {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 174px 0 163px;
+}
+/* line 12, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.blog:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 24, ../sass/style.scss */
+.blog:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 790, ../sass/style.scss */
+.blog h3 {
+  text-transform: uppercase;
+  text-align: center;
+  font: 30px 'Oswald Light', Helvetica, sans-serif;
+  margin-bottom: 93px;
+}
+/* line 797, ../sass/style.scss */
+.blog .blog-post {
+  width: 23.07692%;
+  float: left;
+  margin-right: 2.5641%;
+}
+/* line 800, ../sass/style.scss */
+.blog .blog-post:last-child {
+  width: 23.07692%;
+  float: right;
+  margin-right: 0;
+}
+@media screen and (max-width: 992px) {
+  /* line 797, ../sass/style.scss */
+  .blog .blog-post {
+    width: 48.71795%;
+    float: left;
+    margin-right: 2.5641%;
+  }
+  /* line 807, ../sass/style.scss */
+  .blog .blog-post:last-child {
+    width: 48.71795%;
+    float: right;
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 797, ../sass/style.scss */
+  .blog .blog-post {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  /* line 815, ../sass/style.scss */
+  .blog .blog-post:last-child {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 820, ../sass/style.scss */
+.blog .blog-post .photo {
+  height: 200px;
+  background: #8ddbcb;
+  margin-bottom: 20px;
+}
+/* line 826, ../sass/style.scss */
+.blog .blog-post h3 {
+  font: bold 16px "Lekton", Arial, Helvetica, sans-serif;
+  color: #303030;
+  text-align: left;
+  margin-bottom: 20px;
+}
+/* line 833, ../sass/style.scss */
+.blog .blog-post p {
+  font: 14px 'Lekton', Arial, Helvetica, sans-serif;
+  color: #303030;
+}
+/* line 838, ../sass/style.scss */
+.blog .blog-post .author {
+  margin: 20px 0 0 0;
+}
+/* line 841, ../sass/style.scss */
+.blog .blog-post .author .author-name {
+  font: bold 14px 'Lekton', Arial, Helvetica, sans-serif;
+  color: #60d4d4;
+  text-transform: uppercase;
+  float: left;
+}
+/* line 847, ../sass/style.scss */
+.blog .blog-post .author .author-name small {
+  font-weight: 200;
+  text-transform: lowercase;
+}
+/* line 853, ../sass/style.scss */
+.blog .blog-post .author .read-more {
+  color: #fe0000;
+  font: 14px 'Lekton', Arial, Helvetica, sans-serif;
+  float: right;
+  text-decoration: none;
+}
+/* line 859, ../sass/style.scss */
+.blog .blog-post .author .read-more:hover {
+  font-weight: 600;
+}
+/* line 866, ../sass/style.scss */
+.blog .blog-post-wide {
+  width: 48.71795%;
+  float: left;
+  margin-right: 2.5641%;
+}
+@media screen and (max-width: 992px) {
+  /* line 866, ../sass/style.scss */
+  .blog .blog-post-wide {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 873, ../sass/style.scss */
+.blog .blog-post-wide .photo {
+  background: #f3f2f2;
+}
+
+/* line 879, ../sass/style.scss */
+.client {
+  background: #f2f2f2;
+  padding: 148px 0 65px;
+}
+/* line 883, ../sass/style.scss */
+.client .wrapper {
+  max-width: 1115px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 12, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.client .wrapper:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 24, ../sass/style.scss */
+.client .wrapper:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 888, ../sass/style.scss */
+.client .wrapper ul {
+  margin-bottom: 62px;
+}
+/* line 24, ../sass/style.scss */
+.client .wrapper ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 892, ../sass/style.scss */
+.client .wrapper ul li {
+  width: 18.91892%;
+  float: left;
+  margin-right: 1.35135%;
+  text-align: center;
+}
+/* line 896, ../sass/style.scss */
+.client .wrapper ul li:last-child {
+  width: 18.91892%;
+  float: right;
+  margin-right: 0;
+}
+@media screen and (max-width: 868px) {
+  /* line 892, ../sass/style.scss */
+  .client .wrapper ul li {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  /* line 904, ../sass/style.scss */
+  .client .wrapper ul li:last-child {
+    width: 100%;
+    float: right;
+    margin-right: 0;
+  }
+}
+/* line 911, ../sass/style.scss */
+.client .wrapper .breadcrumbs {
+  text-align: center;
+}
+/* line 914, ../sass/style.scss */
+.client .wrapper .breadcrumbs a {
+  display: inline-block;
+  margin-right: 5px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  padding: 7px 7px;
+  background: #97c2be;
+}
+/* line 921, ../sass/style.scss */
+.client .wrapper .breadcrumbs a:hover {
+  background: #60d4d4;
+}
+
+/* line 929, ../sass/style.scss */
+.tweeter-post {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 192px 0 245px;
+  text-align: center;
+}
+/* line 24, ../sass/style.scss */
+.tweeter-post:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 12, C:/Ruby21-x64/lib/ruby/gems/2.1.0/gems/susy-2.2.2/sass/susy/output/support/_clearfix.scss */
+.tweeter-post:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 935, ../sass/style.scss */
+.tweeter-post a {
+  color: #60d4d4;
+  font-size: 30px;
+}
+/* line 940, ../sass/style.scss */
+.tweeter-post p {
+  font: 24px/1 'Lekton', Arial, Helvetica, sans-serif;
+  font-style: italic;
+  margin-bottom: 10px;
+  text-align: left;
+}
+/* line 947, ../sass/style.scss */
+.tweeter-post fieldset {
+  border-top: 1px dashed #c6c6c6;
+  width: 300px;
+}
+/* line 951, ../sass/style.scss */
+.tweeter-post fieldset legend {
+  text-align: center;
+  font: bold 12px 'Lekton', Helvetica, sans-serif;
+  color: #f48258;
+  padding-right: 15px;
+}
+
+/* line 24, ../sass/style.scss */
+.footer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 964, ../sass/style.scss */
+.footer .footer-section {
+  width: 50%;
+  float: left;
+}
+@media screen and (max-width: 1050px) {
+  /* line 964, ../sass/style.scss */
+  .footer .footer-section {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+/* line 972, ../sass/style.scss */
+.footer .footer-section-form {
+  background: #c8c2b2;
+}
+/* line 975, ../sass/style.scss */
+.footer .footer-section-form .contact {
+  padding: 65px 100px 55px 80px;
+}
+/* line 978, ../sass/style.scss */
+.footer .footer-section-form .contact h2 {
+  font: 24px 'Lekton', Helvetica, sans-serif;
+  color: #646250;
+  text-transform: uppercase;
+}
+/* line 984, ../sass/style.scss */
+.footer .footer-section-form .contact p {
+  font: 12px/1 'Lekton', Helvetica, sans-serif;
+  color: #646250;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+}
+/* line 991, ../sass/style.scss */
+.footer .footer-section-form .contact form {
+  text-align: center;
+}
+/* line 994, ../sass/style.scss */
+.footer .footer-section-form .contact form input {
+  display: block;
+  margin-bottom: 20px;
+  width: 370px;
+  border: none;
+  border-bottom: 1px solid #74725c;
+  background: #c8c2b2;
+}
+/* line 1002, ../sass/style.scss */
+.footer .footer-section-form .contact form input:focus {
+  outline: 0;
+}
+/* line 1007, ../sass/style.scss */
+.footer .footer-section-form .contact form .btn {
+  color: white;
+  text-transform: uppercase;
+  font: 14px 'Lekton', Helvetica, sans-serif;
+  padding: 5px 45px;
+  border: 1px solid #74725c;
+  background: transparent;
+  margin-top: 65px;
+}
+/* line 1016, ../sass/style.scss */
+.footer .footer-section-form .contact form .btn:hover {
+  border: 1px solid black;
+  color: #e6e6e6;
+}
+/* line 1025, ../sass/style.scss */
+.footer .footer-section-copyright {
+  background: #f0d93e;
+  padding: 107px 0 33px 117px;
+}
+/* line 1029, ../sass/style.scss */
+.footer .footer-section-copyright .logo {
+  width: 172px;
+  float: left;
+}
+/* line 24, ../sass/style.scss */
+.footer .footer-section-copyright .logo:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1034, ../sass/style.scss */
+.footer .footer-section-copyright .logo h2 {
+  text-transform: uppercase;
+  font-family: 'Oswald';
+  font-size: 24px;
+  color: #4eabab;
+}
+/* line 1042, ../sass/style.scss */
+.footer .footer-section-copyright .adress {
+  margin-left: 272px;
+}
+/* line 24, ../sass/style.scss */
+.footer .footer-section-copyright .adress:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1046, ../sass/style.scss */
+.footer .footer-section-copyright .adress p {
+  font: 13px/1 'Lekton', Helvetica, sans-serif;
+  color: #333333;
+  text-transform: uppercase;
+}
+/* line 1052, ../sass/style.scss */
+.footer .footer-section-copyright .adress .phone-number {
+  margin-top: 20px;
+}
+/* line 1055, ../sass/style.scss */
+.footer .footer-section-copyright .adress .phone-number a {
+  text-decoration: none;
+  color: #60d4d4;
+  font-weight: bold;
+}
+/* line 1063, ../sass/style.scss */
+.footer .footer-section-copyright ul {
+  margin: 75px auto 0;
+  display: table;
+}
+/* line 24, ../sass/style.scss */
+.footer .footer-section-copyright ul:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+/* line 1068, ../sass/style.scss */
+.footer .footer-section-copyright ul li {
+  float: left;
+}
+/* line 1071, ../sass/style.scss */
+.footer .footer-section-copyright ul li a {
+  color: #46b4b4;
+  margin-right: 7px;
+}
+/* line 1078, ../sass/style.scss */
+.footer .footer-section-copyright .footer-copyright {
+  margin: 95px auto 0;
+  display: table;
+  text-align: center;
+}
+/* line 1083, ../sass/style.scss */
+.footer .footer-section-copyright .footer-copyright p {
+  font: 13px/1 'Lekton', Helvetica, sans-serif;
+  color: #000;
+}
+/* line 1087, ../sass/style.scss */
+.footer .footer-section-copyright .footer-copyright p:last-child {
+  margin-top: 10px;
+}
