@@ -1,0 +1,71 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.wrapper {
+	width: 1164px;
+	margin: 100px auto 0; 
+}
+
+nav,
+.slider {
+	float: left;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.navigation li {
+	width: 250px;
+	background: #fff;
+	height: 86.15px;
+	border: 1px solid #cecece;
+	border-right: none;
+	position: relative;
+	cursor: pointer;
+}
+
+.navigation li.active {
+	background: orange;
+}
+
+.navigation li.active:after {
+	content: '';
+    position: absolute;
+    top: 27px;
+    left: 249px;
+    border-left: 13px solid orange;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+}
+
+.slider {
+	overflow: hidden;
+	width: 910px;
+	height: 345px;
+}
+
+.slides {
+	width: 3640px;
+	height: 345px;
+}
+
+.slider li {
+	width: 910px;
+	height: 345px;
+	float: left;
+}
+
+.clearfix:after {
+	content: '';
+	display: table;
+	clear: both;
+}
