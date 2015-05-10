@@ -7,9 +7,8 @@
 		sliderInterval,
 		currentSlide;
 
-	function init(slideIndex) {
-		goToSlide(slideIndex || 0);
-		startRotation();	
+	function init() {
+		startRotation(0);	
 		tabClicks();
 	}
 
@@ -24,7 +23,8 @@
 		tabs.eq(currentSlide).addClass('active');
 	}	
 
-	function startRotation() {
+	function startRotation(index) {
+		goToSlide(index)
 		sliderInterval = setInterval(function() {
 			nextSlide();
 		}, 2000);
@@ -46,20 +46,14 @@
 
 		tabs.on('click', function() {
 
-			goToSlide(tabs.index(this));
-
 			clearInterval(sliderInterval);
-			clearTimeout(interruptTimer);
-			var interruptTimer = setTimeout(function() {
+			startRotation(tabs.index(this));	
 
-				startRotation();	
-
-			}, 2000);
 			return false;
 		});
 	}
 
-	init(currentSlide);
+	init();
 
 })(jQuery);
 
