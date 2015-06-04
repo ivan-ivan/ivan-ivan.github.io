@@ -1,0 +1,43 @@
+ul {
+	width: 150px;
+}
+
+li {
+	list-style: none;
+	position: relative;
+	background: #eee;
+	min-height: 25px;
+	text-align: center;
+	margin-bottom: 2px;
+	font-size: 18px;
+}
+
+li:nth-child(2n) {
+	background: #ccc;
+}
+
+li:hover:after {
+	content: '✓';
+	position: absolute;
+	right: 10px;
+	/*background: lightgreen;*/
+}
+
+button {
+	background: #eee;
+	border: 0;
+	text-transform: uppercase;
+	padding: 10px 15px;
+	box-shadow: 0 3px 0 #ccc;
+	border-radius: 3px;
+	transition: .2s;
+}
+
+button:focus {
+	outline: 0;
+}
+
+button:active {
+	box-shadow: 0 0 0 #ccc;
+	transform: translateY(3px);
+}
