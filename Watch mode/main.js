@@ -1,112 +1,57 @@
 (function() {
+	'use strict';
 
-	var startTimes,
-		timerChooser = document.getElementById('time-chooser');
+	var timerChooser = document.getElementById("time-chooser"),
+	    activeMode = "short";
 
-	function loadChosenMode (attachTo, mode) {
-		var ourTime = render(mode);
-		attachTo.innerHTML = ourTime;
-	}
-
-	function render (mode) {
+	function getTimeString (mode) {
 
 		var currentTime = new Date(),
-			hours = currentTime.getHours(),
-			minutes = currentTime.getMinutes(),
-			seconds = currentTime.getSeconds(),
-			year = currentTime.getFullYear(),
-			day = currentTime.getDate(),
-			month = currentTime.getMonth() + 1,
-			resultingString = '';
+			stringWithTime = '';
 
-			if (hours < 10) {
-				hours = '0' + hours;
+		function getFullTimeFormat (timeValue) {
+			if (timeValue < 10) {
+				timeValue = '0' + timeValue;
 			}
-			if (minutes < 10) {
-				minutes = '0' + minutes;
-			}
-			if (seconds < 10) {
-				seconds = '0' + seconds;
-			}
-			if (day < 10) {
-				day = '0' + day;
-			}
-			if (month < 10) {
-				month = '0' + month;
-			}
-
-		if (mode === 'short') {
-			resultingString += '<span>' + hours + ':' + minutes + '</span>';
-		} else if (mode === 'full') {
-			resultingString += '<span>' + hours + ':' + minutes + ':' + seconds + '</span>';
-		} else if (mode === 'date') {
-			resultingString += '<span>' + month + '/' + day + '/' + year + '</span>';
+			return timeValue;
 		}
 
-		return resultingString;
+		switch (mode) {
+
+		  case "short":
+		    stringWithTime = '<span>' + getFullTimeFormat(currentTime.getHours()) + ':'
+		     + getFullTimeFormat(currentTime.getMinutes()) + '</span>';
+		    break;
+
+		  case "full":
+		  	stringWithTime = '<span>' + getFullTimeFormat(currentTime.getHours()) + ':'
+		     + getFullTimeFormat(currentTime.getMinutes()) + ':' + getFullTimeFormat(currentTime.getSeconds()) + '</span>';
+		    break;
+
+		  case "date":
+		    stringWithTime = '<span>' + getFullTimeFormat(currentTime.getMonth() + 1) + '/'
+		     + getFullTimeFormat(currentTime.getDay()) + '/' + currentTime.getFullYear() + '</span>';
+		    break;
+	
+		}
+
+		return stringWithTime;
 
 	}
 
-	function leftMouseMode (event) {
-
-		var event = event || window.event,
-			target = event.target || event.srcElement,
-			parent = target.parentNode;
-
-		if (parent.classList.contains('lmb-mode')) {
-			clearInterval(startTimes);
-			startTimes = setInterval(function() {
-				loadChosenMode(timerChooser, 'full');
-			}, 1000);
-			parent.classList.remove('lmb-mode');
-		} else {
-			clearInterval(startTimes);
-			startTimes = setInterval(function() {
-				loadChosenMode(timerChooser, 'short');
-			}, 1000);
-			parent.classList.add('lmb-mode');
-		}
-	}
-
-	function rightMouseMode (event) {
-
-		var event = event || window.event,
-			target = event.target || event.srcElement,
-			parent = target.parentNode;
-
-		event.preventDefault();
-
-		if (parent.classList.contains('rmb-mode')) {
-			clearInterval(startTimes);
-			startTimes = setInterval(function() {
-				loadChosenMode(timerChooser, 'full');
-			}, 1000);
-			parent.classList.remove('rmb-mode');
-		} else {
-			clearInterval(startTimes);
-			startTimes = setInterval(function() {
-				loadChosenMode(timerChooser, 'date');
-			}, 1000);
-			parent.classList.add('rmb-mode');
-		}
-	}
-
-	document.addEventListener('DOMContentLoaded', function() {
-
-		loadChosenMode(timerChooser, 'full');
-		startTimes = setInterval(function() {
-			loadChosenMode(timerChooser, 'full');
-		}, 1000);
-
+	timerChooser.addEventListener('click', function() {
+		activeMode = (activeMode !== "short") ? "short" : "full";
+		timerChooser.innerHTML = getTimeString(activeMode);
 	}, false);
-	timerChooser.addEventListener('click', leftMouseMode, false);
-	timerChooser.addEventListener('contextmenu', rightMouseMode, false);
+
+	timerChooser.addEventListener('contextmenu', function(event) {
+		activeMode = (activeMode !== "date") ? "date" : "short";
+		timerChooser.innerHTML = getTimeString(activeMode);
+		event.preventDefault();
+	}, false);
+
+	setInterval(function () {
+		timerChooser.innerHTML = getTimeString(activeMode);
+	}, 1000);
 
 })();
-
-
-
-
-
-
-
