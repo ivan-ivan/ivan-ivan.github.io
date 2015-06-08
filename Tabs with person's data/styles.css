@@ -1,0 +1,28 @@
+ul {
+	float: left;
+}
+
+li {
+	list-style: none;
+}
+
+.container {
+	margin-top: 100px;
+}
+
+.list-group {
+	width: 310px;
+}
+
+	.list-group-item {
+		padding: 30px 15px;
+		cursor: pointer;
+	}
+
+	.list-group-item:hover {
+		background: rgba(0, 0, 0, .01);
+	}
+
+.alert {
+	width: 200px;
+}
