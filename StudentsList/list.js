@@ -1,48 +1,60 @@
-'use strict';
-//document.addEventListener('DOMContentLoaded', init, false);
 
-var arrayOfStudents = ['Алена', 'Андрей', 'Алексей', 'Дмитрий', 'Иван', 'Карина', 'Максим', 'Сергей'],
-	body = document.getElementsByTagName('body')[0],
-	toggleButton = document.createElement('button');
+function StudentsList (students) {
+	var students = students,
+		body = document.body,
+		ul = document.createElement('ul'),
+		toggleButton = document.createElement('button');
 
-	toggleButton.innerHTML = 'push to show students';
-	body.insertBefore(toggleButton, body.firstChild);
-
-var listMethods = {
-
-	ul: document.createElement('ul'),
-
-	generateList: function () {
+	function generateList () {
 		var i,
-			len,
+			len = students.length,
 			li = '';
 
-		for (i = 0, len = arrayOfStudents.length; i < len; i++) {
-			li += '<li>' + arrayOfStudents[i] + '</li>';
-			
+		for (i = 0; i < len; i++) {
+			li += '<li>' + students[i].name + ' ' + students[i].sex + ' ' + students[i].hair + '</li>';
 		}
 
-		this.ul.innerHTML = li;
-		body.appendChild(this.ul);
-	},
-
-	removeList: function () {
-		this.ul.parentNode.removeChild(this.ul);
+		ul.innerHTML = li;
+		body.appendChild(ul);
 	}
 
-};
-
-toggleButton.addEventListener('click', function() {
-
-	if (this.classList.contains('open')) {
-		listMethods.removeList();
-		this.classList.remove('open');
-	} else {
-		listMethods.generateList();
-		this.classList.add('open');
+	function removeList () {
+		ul.parentNode.removeChild(ul);
 	}
 
-}, false);
+	this.init = function () {
+		this.initialiseButton('push to show students');
+		this.addListeners();
+	};
+
+	this.initialiseButton = function (textOnButton) {
+		body.insertBefore(toggleButton, body.firstChild);
+		toggleButton.innerHTML = textOnButton;
+	};
+
+	this.addListeners = function () {
+		toggleButton.addEventListener('click', function() {
+
+			if (this.classList.contains('open')) {
+				removeList();
+				this.classList.remove('open');
+			} else {
+				generateList();
+				this.classList.add('open');
+			}
+
+		}, false);
+	};
+
+	return this;
+}
+
+
+
+
+
+
+
 
 
 
