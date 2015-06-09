@@ -1,7 +1,7 @@
-function StudentsList (students) {
+function StudentsList (_students) {
 	'use strict';
 
-	var students = students,
+	var students = _students,
 		body = document.body,
 		ul = document.createElement('ul'),
 		toggleButton = document.createElement('button');

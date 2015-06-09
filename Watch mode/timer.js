@@ -1,10 +1,10 @@
-function TimeChooser (wrapper) {
+function TimeChooser (_wrapper) {
 	'use strict';
 
-	var timerChooser = wrapper,
+	var timerChooser = _wrapper,
 	    activeMode = "short";
 
-	function getFullTimeFormat (timeValue) {
+	function getRightFormat (timeValue) {
 		if (timeValue < 10) {
 			timeValue = '0' + timeValue;
 		}
@@ -22,16 +22,16 @@ function TimeChooser (wrapper) {
 
 		 mySwitch = {
 		 	'short': function () {
-		 		time = '<span>' + getFullTimeFormat(hours) + ':'
-			     + getFullTimeFormat(minutes) + '</span>';
+		 		time = '<span>' + getRightFormat(hours) + ':'
+			     + getRightFormat(minutes) + '</span>';
 		 	},
 		 	'full': function () {
-		 		time = '<span>' + getFullTimeFormat(hours) + ':'
-			     + getFullTimeFormat(minutes) + ':' + getFullTimeFormat(seconds) + '</span>';
+		 		time = '<span>' + getRightFormat(hours) + ':'
+			     + getRightFormat(minutes) + ':' + getRightFormat(seconds) + '</span>';
 		 	},
 		 	'date': function () {
-		 		time = '<span>' + getFullTimeFormat(currentTime.getMonth() + 1) + '/'
-			     + getFullTimeFormat(currentTime.getDay()) + '/' + currentTime.getFullYear() + '</span>';
+		 		time = '<span>' + getRightFormat(currentTime.getMonth() + 1) + '/'
+			     + getRightFormat(currentTime.getDay()) + '/' + currentTime.getFullYear() + '</span>';
 		 	}
 		 };
 

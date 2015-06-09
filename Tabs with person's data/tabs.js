@@ -1,9 +1,9 @@
-function Person (wrapper, person) {
+function Person (_wrapper, _person) {
 	'use strict';
 
-	var wrapper = wrapper,
-		ul = document.createElement('ul'),
-		person = person;
+	var wrapper = _wrapper,
+		person = _person,
+		ul = document.createElement('ul');
 
 	ul.classList.add('alerts');
 
@@ -16,12 +16,13 @@ function Person (wrapper, person) {
 
 	function renderTabs (wrapper) {
 		var ul = document.createElement('ul'),
-			i;
+			i,
+			li;
 
 		ul.classList.add('list-group');
 
 		for (i = 0; i < 3; i++) {
-			var li = document.createElement('li');
+			li = document.createElement('li');
 			li.classList.add('list-group-item', i);
 			ul.appendChild(li);
 		}
@@ -31,6 +32,8 @@ function Person (wrapper, person) {
 
 	function addEvents () {
 		var	element = document.querySelector('.list-group');
+
+		element.addEventListener('click', getCurrentTab, false);
 
 		function getCurrentTab (event) {
 			var target = event.target,
@@ -54,21 +57,21 @@ function Person (wrapper, person) {
 				show(2);
 			}
 		}
-
-		element.addEventListener('click', getCurrentTab, false);
 	}
 
-	function show (whichTab) {
-		var key;
+	function renderInfoTabs (index) {
+		var key,
+			li;
 
-		function renderInfoTabs (index) {
-			for (key in person[index]) {
-				var li = document.createElement('li');
-				li.appendChild(document.createTextNode(person[index][key]));
-				li.classList.add('alert', 'alert-success');
-				ul.appendChild(li);
-			}	
-		}
+		for (key in person[index]) {
+			li = document.createElement('li');
+			li.appendChild(document.createTextNode(person[index][key]));
+			li.classList.add('alert', 'alert-success');
+			ul.appendChild(li);
+		}	
+	}
+	
+	function show (whichTab) {
 
 		if (whichTab === 0) {
 			renderInfoTabs(0);
