@@ -1,9 +1,11 @@
+'use strict';
+
 document.addEventListener('DOMContentLoaded', ready, false);
 
 function ready () {
 	var person = [],
 		wrapper = document.querySelector('.container');
-		
+
 	person = [{
 		name: 'Martin',
 		lastName: 'McCluskey',

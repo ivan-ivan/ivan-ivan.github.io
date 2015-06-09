@@ -1,4 +1,6 @@
 function Person (wrapper, person) {
+	'use strict';
+
 	var wrapper = wrapper,
 		ul = document.createElement('ul'),
 		person = person;
@@ -59,28 +61,23 @@ function Person (wrapper, person) {
 	function show (whichTab) {
 		var key;
 
-		if (whichTab === 0) {
-			for (key in person[0]) {
+		function renderInfoTabs (index) {
+			for (key in person[index]) {
 				var li = document.createElement('li');
-				li.appendChild(document.createTextNode(person[0][key]));
+				li.appendChild(document.createTextNode(person[index][key]));
 				li.classList.add('alert', 'alert-success');
 				ul.appendChild(li);
-			}
-		} else if (whichTab === 1) {
-			for (key in person[1]) {
-				var li = document.createElement('li');
-				li.appendChild(document.createTextNode(person[1][key]));
-				li.classList.add('alert', 'alert-success');
-				ul.appendChild(li);
-			}
-		} else if (whichTab === 2) {
-			for (key in person[2]) {
-				var li = document.createElement('li');
-				li.appendChild(document.createTextNode(person[2][key]));
-				li.classList.add('alert', 'alert-success');
-				ul.appendChild(li);
-			}
+			}	
 		}
+
+		if (whichTab === 0) {
+			renderInfoTabs(0);
+		} else if (whichTab === 1) {
+			renderInfoTabs(1);
+		} else if (whichTab === 2) {
+			renderInfoTabs(2);
+		}
+
 		wrapper.appendChild(ul); 
 	}
 

@@ -1,5 +1,6 @@
-
 function StudentsList (students) {
+	'use strict';
+
 	var students = students,
 		body = document.body,
 		ul = document.createElement('ul'),
@@ -22,7 +23,7 @@ function StudentsList (students) {
 		ul.parentNode.removeChild(ul);
 	}
 
-	this.init = function () {
+	this.render = function () {
 		this.initialiseButton('push to show students');
 		this.addListeners();
 	};
