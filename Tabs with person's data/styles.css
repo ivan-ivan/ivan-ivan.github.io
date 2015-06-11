@@ -1,6 +1,6 @@
-ul {
+/*ul {
 	float: left;
-}
+}*/
 
 li {
 	list-style: none;
@@ -12,6 +12,8 @@ li {
 
 .list-group {
 	width: 310px;
+	float: left;
+	margin-bottom: 57px;
 }
 
 	.list-group-item {
@@ -25,4 +27,31 @@ li {
 
 .alert {
 	width: 200px;
+	padding: 5px;
+	margin-bottom: 1px;
 }
+
+.btn {
+	display: block;
+	clear: left;
+}
+
+.full-list {
+	width: 250px;
+	position: relative;
+	float: left;
+}
+
+.full-list:after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+	span {
+		position: absolute;	
+		font-weight: bold;
+		cursor: pointer;
+		bottom: 0;
+		right: 0
+	}
