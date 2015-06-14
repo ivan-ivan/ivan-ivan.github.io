@@ -1,61 +1,34 @@
-function View (_wrapper) {
+function View (_rootEl, index) {
 	'use strict';
 
-	var wrapper = _wrapper,
-		person = new Person();
+	var rootEl = _rootEl,
+		person = new Group(); 
 
-	renderTabs(wrapper); //rendering first, then attaching events 
-
-	function renderTabs (wrapper) {
+	function renderTabs (rootEl) {
 		var tpl = _.template(template.tplTabs);
-		wrapper.innerHTML = tpl();
+		rootEl.innerHTML += tpl(); 
 	}
 
-	var preview = new Preview(wrapper), //place it here 'cause we need to wait 'til all is rendered
-		tabs = utils.getElement('.list-group'),
-		div = utils.getElement('.full-list');
+	renderTabs(rootEl); //rendering first, then attaching events 
 
-	utils.addEvent(tabs, getCurrentTab);
+	var preview = new Preview(index), //place it here 'cause we need to wait 'til all is rendered
+		tabs = document.querySelector('.list-group'),
+		div = document.querySelector('.full-list');
 
-	function getCurrentTab (event) {
-		var target = event.target,
-			uniqueClass = target.classList[1],
-			childerLength = div.children;
+	tabs.addEventListener('click', renderInfo, false);
 
-		if (uniqueClass === '0') {
-			if (childerLength) { // check if ul with alerts already exists
-				dismiss();
+	function renderInfo (event) {
+		var uniqueClass = event.target.classList[1],
+			childerLength = div.children,
+			tpl = _.template(template.tplPartialInfo);
+
+		function renderUnique (uniqueClass) { 
+			if (childerLength) { // check if ul with info already exists
+				div.innerHTML = '';
 			} 
-			show(0);
-		} else if (uniqueClass === '1') {
-			if (childerLength) { 
-				dismiss();
-			}
-			show(1);
-		} else if (uniqueClass === '2') {
-			if (childerLength) {
-				dismiss();
-			}
-			show(2);
+			div.innerHTML += tpl({collection: person.students[index].get(Number(uniqueClass))}); 
 		}
-	}
 
-	function show (whichTab) {
-		if (whichTab === 0) {
-			renderInfoTabs(0);
-		} else if (whichTab === 1) {
-			renderInfoTabs(1);
-		} else if (whichTab === 2) {
-			renderInfoTabs(2);
-		}
-	}
-
-	function renderInfoTabs (index) {
-		var tpl = _.template(template.tplPartialInfo);
-		div.innerHTML += tpl({collection: person.get(index)});
-	}
-
-	function dismiss () {
-		div.innerHTML = '';
+		renderUnique(uniqueClass);
 	}
 }

@@ -1,14 +1,15 @@
 var template = {
 	
 	tplTabs: [
+		'   <div class="info-wrapper">',
 		'	<ul class="list-group">',
-		'		<li class="list-group-item 0"></li>',
-		'		<li class="list-group-item 1"></li>',
-		'		<li class="list-group-item 2"></li>',
+		'		<li class="list-group-item 0">Full name</li>',
+		'		<li class="list-group-item 1">Person\'s data</li>',
+		'		<li class="list-group-item 2">Passport</li>',
 		'	</ul>',
 		'	<div class="full-list"></div>',
-		'	<button class="btn btn-default">Preview</button>'
-		].join(''),
+		'	<button class="btn btn-default">Preview</button>',
+		'</div>'].join(''),
 
 	tplPartialInfo:  [
 		'		<ul>',

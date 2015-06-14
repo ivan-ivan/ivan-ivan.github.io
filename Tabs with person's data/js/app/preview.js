@@ -1,11 +1,11 @@
-function Preview () {
+function Preview (index) {
 	'use strict';
 
-	var btn = utils.getElement('.btn'),
-		div = utils.getElement('.full-list'),
-		person = new Person();
+	var btn = document.querySelector('.btn'),
+		div = document.querySelector('.full-list'),
+		person = new Group();	
 
-	utils.addEvent(btn, showPreview);
+	btn.addEventListener('click', showPreview, false);
 
 	function showPreview () {
 		var childerLength = div.children,
@@ -16,16 +16,14 @@ function Preview () {
 			div.innerHTML = '';
 		} 
 
-		div.innerHTML += tpl({collection: person.toJSON()});
+		div.innerHTML += tpl({collection: person.students[index].toJSON()});
 		btn.disabled = true;	
 
-		span = utils.getElement('span');
-		utils.addEvent(span, closePreview);
-	}
-
-	function closePreview () {
-		div.innerHTML = '';
-		btn.disabled = false;
+		span = document.querySelector('span');
+		span.addEventListener('click', function() {
+			div.innerHTML = '';
+			btn.disabled = false;
+		}, false);
 	}
 
 	return this;
