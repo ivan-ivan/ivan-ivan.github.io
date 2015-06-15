@@ -13,4 +13,4 @@ function Group () {
 	];	
 }
 
-//make a setter for pushing a new student to the hash
+//may be done a setter for pushing a new student to the hash if needed

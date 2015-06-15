@@ -7,4 +7,6 @@ function StudentView (studentObj) {
 		tpl = _.template(studentTpl);
 
 	this.studentStr = tpl({collection: student.toJSON()});
+
+	return this;
 }
